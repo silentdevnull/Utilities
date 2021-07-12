@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace SilentDevNull.Utilities.Helpers
 {
@@ -14,6 +15,20 @@ namespace SilentDevNull.Utilities.Helpers
         {
             var valueBytes = System.Convert.FromBase64String(value);
             return Encoding.UTF8.GetString(valueBytes);
+        }
+
+        public static String CreateSHA256(this String value)
+        {
+            using(SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(value));  
+                StringBuilder builder = new StringBuilder();  
+                for (int i = 0; i < bytes.Length; i++)  
+                {  
+                    builder.Append(bytes[i].ToString("x2"));  
+                }  
+                return builder.ToString();
+            }
         }
     }
 }   
