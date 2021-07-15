@@ -1,7 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <AnalysisLevel>5</AnalysisLevel>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SilentDevNull.Utilities</PackageId>
+    <Version>0.0.1.1-beta</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Company>None</Company>
+    <Authors>SilentDevNull</Authors>
+    <PackageProjectUrl>https://github.com/silentdevnull/Utilities</PackageProjectUrl>
+    <Copyright>Copyright 2021</Copyright>
+    <Description>Utilities</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/silentdevnull/Utilities</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RootNamespace>SilentDevNull.Utilities</RootNamespace>
+    <AssemblyName>SilentDevNull.Utilities</AssemblyName>
+    <NoWarn>CA1416</NoWarn>
   </PropertyGroup>
-
+  <ItemGroup>
+    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="5.0.0" />
+    <PackageReference Include="System.Security.AccessControl" Version="5.0.0" />
+  </ItemGroup>
 </Project>
