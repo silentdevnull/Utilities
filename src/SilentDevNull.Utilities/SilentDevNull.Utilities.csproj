@@ -4,7 +4,7 @@
     <AnalysisLevel>5</AnalysisLevel>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SilentDevNull.Utilities</PackageId>
-    <Version>0.0.1.1-beta</Version>
+    <Version>0.0.1.2-beta</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Company>None</Company>
     <Authors>SilentDevNull</Authors>
