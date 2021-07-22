@@ -29,7 +29,6 @@ namespace SilentDevNull.Utilities.Mail
             get
             {
                 return _from;
-
             }
             set
             {
@@ -71,7 +70,6 @@ namespace SilentDevNull.Utilities.Mail
                 _smtpServer = value;
             }
         }
-
         public String Username
         {
             get
