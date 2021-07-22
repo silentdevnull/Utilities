@@ -7,13 +7,13 @@ namespace SilentDevNull.Utilities.Mail
     {
         private String _to { get; set; }
         private String _from { get; set; }
-        private String _fromDisplayName {get;set;}
+        private String _fromDisplayName { get; set; }
         private String _subject { get; set; }
         private String _smtpServer { get; set; }
         private String _username { get; set; }
         private String _password { get; set; }
-        
-        public String To 
+
+        public String To
         {
             get
             {
@@ -21,7 +21,7 @@ namespace SilentDevNull.Utilities.Mail
             }
             set
             {
-                _to  = value;
+                _to = value;
             }
         }
         public String From
@@ -48,7 +48,7 @@ namespace SilentDevNull.Utilities.Mail
             }
         }
 
-        public String Subject 
+        public String Subject
         {
             get
             {
@@ -60,7 +60,7 @@ namespace SilentDevNull.Utilities.Mail
             }
         }
 
-        public String STMPServer 
+        public String STMPServer
         {
             get
             {
@@ -72,7 +72,7 @@ namespace SilentDevNull.Utilities.Mail
             }
         }
 
-        public String Username 
+        public String Username
         {
             get
             {
@@ -95,7 +95,7 @@ namespace SilentDevNull.Utilities.Mail
                 _password = value;
             }
         }
-        
+
         public SendEmail()
         {
         }
