@@ -133,7 +133,6 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
         /// <return>True or False</return>
         public static void DeleteDirectory(String Path, String Name)
         {
-
             String strDirectory = BuildDirectory(Path, Name);
             try
             {
@@ -145,7 +144,6 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 Console.WriteLine(ex.Message);
 #endif
             }
-
         }
         /// <summary>
         ///
@@ -168,13 +166,11 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
         /// <return>True or False</return>
         public static void EnableDirectoryInheritance(String Path, String Name)
         {
-
             String strDirectory = BuildDirectory(Path, Name);
             DirectoryInfo di = new DirectoryInfo(strDirectory);
             DirectorySecurity dirSec = di.GetAccessControl();
             dirSec.SetAccessRuleProtection(false, false);
             di.SetAccessControl(dirSec);
-
         }
         /// <summary>
         ///
@@ -498,7 +494,6 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
             sb.Append(Name);
             return sb.ToString();
         }
-
         public static bool PathIsValid(string inputPath)
         {
             try
