@@ -69,7 +69,5 @@ namespace SilentDevNull.Utilities.Validation
             return false;
         }
         #endregion
-
-
     }
 }
