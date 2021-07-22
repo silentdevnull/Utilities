@@ -22,9 +22,9 @@ jobs:
       - name: Set up projects for analysis
         uses: security-code-scan/security-code-scan-add-action@main
       - name: Restore dependencies	
-        run: dotnet restore
+        run: dotnet restore ./src/SilentDevNull.Utilities/
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build --no-restore ./src/SilentDevNull.Utilities/
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@main
       - name: Upload sarif
