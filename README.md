@@ -1,1 +1,4 @@
+[![CodeQL](https://github.com/silentdevnull/Utilities/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/silentdevnull/Utilities/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/silentdevnull/utilities/badge)](https://www.codefactor.io/repository/github/silentdevnull/utilities)
+[![DevSkim](https://github.com/silentdevnull/Utilities/actions/workflows/devskim-analysis.yml/badge.svg)](https://github.com/silentdevnull/Utilities/actions/workflows/devskim-analysis.yml)
+[![SecurityCodeScan](https://github.com/silentdevnull/Utilities/actions/workflows/securitycodescan-analysis.yml/badge.svg?branch=main)](https://github.com/silentdevnull/Utilities/actions/workflows/securitycodescan-analysis.yml)
