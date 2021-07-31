@@ -1,5 +1,7 @@
 using System;
 using System.Net.Mail;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace SilentDevNull.Utilities.Mail
 {
@@ -9,9 +11,15 @@ namespace SilentDevNull.Utilities.Mail
         private String _from { get; set; }
         private String _fromDisplayName { get; set; }
         private String _subject { get; set; }
+        private String _messageBody { get; set; }
         private String _smtpServer { get; set; }
+        private int _smtpPort { get; set; } = 25;
         private String _username { get; set; }
         private String _password { get; set; }
+        private Boolean _useDefaultCredentials { get; set; } = false;
+        private Boolean _useAnonymousAuthentication { get; set; } = true;
+        private Boolean _isBodyHtml { get; set; } = false;
+        private Boolean _enableSSL {get;set;} = false;
 
         public String To
         {
@@ -59,6 +67,18 @@ namespace SilentDevNull.Utilities.Mail
             }
         }
 
+        public String MessageBody
+        {
+            get
+            {
+                return _messageBody;
+            }
+            set
+            {
+                _messageBody = value;
+            }
+        }
+
         public String STMPServer
         {
             get
@@ -70,7 +90,18 @@ namespace SilentDevNull.Utilities.Mail
                 _smtpServer = value;
             }
         }
-        public String Username
+        public int STMPPort
+        {
+            get
+            {
+                return _smtpPort;
+            }
+            set
+            {
+                _smtpPort = value;
+            }
+        }
+        private String Username
         {
             get
             {
@@ -82,7 +113,7 @@ namespace SilentDevNull.Utilities.Mail
             }
         }
 
-        public String Password
+        private String Password
         {
             get
             {
@@ -96,6 +127,25 @@ namespace SilentDevNull.Utilities.Mail
 
         public SendEmail()
         {
+            
+        }
+
+        public void SendMessage()
+        {
+            using (var smtpClient = new SmtpClient(_smtpServer,_smtpPort))
+            {
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.UseDefaultCredentials = _useDefaultCredentials;
+                smtpClient.EnableSsl = _enableSSL;
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.IsBodyHtml = _isBodyHtml;
+                mailMessage.From = new MailAddress(_from,_fromDisplayName);
+                mailMessage.To.Add(_to);
+                mailMessage.Subject = _subject;
+                mailMessage.Body = _messageBody;
+                mailMessage.BodyEncoding = Encoding.UTF8;
+                smtpClient.Send(mailMessage);
+            }
         }
     }
 }
