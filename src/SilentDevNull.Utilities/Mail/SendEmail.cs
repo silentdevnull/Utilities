@@ -136,12 +136,6 @@ namespace SilentDevNull.Utilities.Mail
                 _isBodyHtml = value;
             }
         }
-        public SendEmail()
-        {
-            if(File.Exists("mailconfig.json"))
-            {
-            }
-        }
 
         public void SendMessage()
         {
