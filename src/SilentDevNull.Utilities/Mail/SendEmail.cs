@@ -16,10 +16,10 @@ namespace SilentDevNull.Utilities.Mail
         private int _smtpPort { get; set; } = 25;
         private String _username { get; set; }
         private String _password { get; set; }
-        private Boolean _useDefaultCredentials { get; set; } = false;
+        private Boolean _useDefaultCredentials { get; set; } = true;
         private Boolean _useAnonymousAuthentication { get; set; } = true;
         private Boolean _isBodyHtml { get; set; } = false;
-        private Boolean _enableSSL {get;set;} = false;
+        private Boolean _enableSSL { get; set; } = false;
 
         public String To
         {
@@ -127,19 +127,19 @@ namespace SilentDevNull.Utilities.Mail
 
         public SendEmail()
         {
-            
+
         }
 
         public void SendMessage()
         {
-            using (var smtpClient = new SmtpClient(_smtpServer,_smtpPort))
+            using (var smtpClient = new SmtpClient(_smtpServer, _smtpPort))
             {
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.UseDefaultCredentials = _useDefaultCredentials;
                 smtpClient.EnableSsl = _enableSSL;
                 MailMessage mailMessage = new MailMessage();
                 mailMessage.IsBodyHtml = _isBodyHtml;
-                mailMessage.From = new MailAddress(_from,_fromDisplayName);
+                mailMessage.From = new MailAddress(_from, _fromDisplayName);
                 mailMessage.To.Add(_to);
                 mailMessage.Subject = _subject;
                 mailMessage.Body = _messageBody;
