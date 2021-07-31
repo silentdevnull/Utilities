@@ -135,6 +135,7 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
             String strDirectory = BuildDirectory(Path, Name);
             Directory.Delete(strDirectory);
         }
+        /*
         /// <summary>
         ///
         /// </summary>
@@ -144,7 +145,7 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
         private static Boolean RenameDirectory(String Path, String Name, String newName)
         {
             return false;
-        }
+        }*/
         #endregion
 
         #region DirectoryPermissions
