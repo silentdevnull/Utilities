@@ -363,7 +363,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.FullControl) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
@@ -386,7 +388,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.Modify) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
@@ -409,7 +413,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.Write) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
@@ -432,7 +438,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.Read) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
@@ -455,7 +463,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.ReadAndExecute) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
@@ -478,7 +488,9 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
                 if (rule.IdentityReference.Value == Username)
                 {
                     if ((((FileSystemAccessRule)rule).FileSystemRights & FileSystemRights.ListDirectory) > 0)
+                    {
                         return true;
+                    }
                 }
             }
             return false;
