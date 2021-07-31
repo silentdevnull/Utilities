@@ -11,7 +11,7 @@ namespace SilentDevNull.Utilities.Security
         public static String CreateRandomPassword(int length = 0) //int length = 0
         {
             int pwdLength = 0;
-            int size = 0;
+            int size;
             if(length == 0)
             {
                 Random randomSize = new Random();
