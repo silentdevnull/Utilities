@@ -19,8 +19,8 @@ namespace SilentDevNull.Utilities.Mail
         private String _password { get; set; }
         private Boolean _useDefaultCredentials { get; set; } = true;
         private Boolean _useAnonymousAuthentication { get; set; } = true;
-        private Boolean _isBodyHtml { get; set; } = false;
-        private Boolean _enableSSL { get; set; } = false;
+        private Boolean _isBodyHtml { get; set; }
+        private Boolean _enableSSL { get; set; }
 
         public String To
         {
