@@ -136,7 +136,17 @@ namespace SilentDevNull.Utilities.Mail
                 _isBodyHtml = value;
             }
         }
-
+        public Boolean EnableSsl
+        {
+            get
+            {
+                return _enableSSL;
+            }
+            set
+            {
+                _enableSSL = value;
+            }
+        }
         public void SendMessage()
         {
             using (var smtpClient = new SmtpClient(_smtpServer, _smtpPort))
