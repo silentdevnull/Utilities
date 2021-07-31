@@ -7,8 +7,12 @@ namespace SilentDevNull.Utilities.Security
     {
         private static readonly int _min = 20;
         private static readonly int _max = 40;
-
-        public static String CreateRandomPassword(int length = 0)
+        
+        /*public static String CreateRandomPassword()
+        {
+            CreateRandomPassword(0);
+        }*/
+        public static String CreateRandomPassword(int length = 0) //int length = 0
         {
             int pwdLength = 0;
             if(length == 0)
@@ -26,8 +30,9 @@ namespace SilentDevNull.Utilities.Security
             int size = random.Next(8, validChars.Length);
             char[] chars = new char[pwdLength];
             for (var i = 0; i < pwdLength; i++)
+            {
                 chars[i] = validChars[random.Next(0, validChars.Length)];
-
+            }
             return new string(chars);
         }
     }

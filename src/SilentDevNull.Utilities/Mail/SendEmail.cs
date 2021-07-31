@@ -1,5 +1,6 @@
 using System;
 using System.Net.Mail;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -127,7 +128,10 @@ namespace SilentDevNull.Utilities.Mail
 
         public SendEmail()
         {
-
+            if(File.Exists("mailconfig.json"))
+            {
+                Console.WriteLine("need to load mailconfig.json");
+            }
         }
 
         public void SendMessage()
