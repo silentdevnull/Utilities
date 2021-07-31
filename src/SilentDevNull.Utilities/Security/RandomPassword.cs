@@ -7,11 +7,7 @@ namespace SilentDevNull.Utilities.Security
     {
         private static readonly int _min = 20;
         private static readonly int _max = 40;
-        
-        /*public static String CreateRandomPassword()
-        {
-            CreateRandomPassword(0);
-        }*/
+
         public static String CreateRandomPassword(int length = 0) //int length = 0
         {
             int pwdLength = 0;

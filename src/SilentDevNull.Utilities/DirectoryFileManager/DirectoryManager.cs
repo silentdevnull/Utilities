@@ -133,16 +133,7 @@ namespace SilentDevNull.Utilities.DirectoryFileManager
         public static void DeleteDirectory(String Path, String Name)
         {
             String strDirectory = BuildDirectory(Path, Name);
-            try
-            {
-                Directory.Delete(strDirectory);
-            }
-            catch (Exception ex)
-            {
-#if (DEBUG)
-                Console.WriteLine(ex.Message);
-#endif
-            }
+            Directory.Delete(strDirectory);
         }
         /// <summary>
         ///

@@ -125,7 +125,17 @@ namespace SilentDevNull.Utilities.Mail
                 _password = value;
             }
         }
-
+        public Boolean IsBodyHtml
+        {
+            get
+            {
+                return _isBodyHtml;
+            }
+            set
+            {
+                _isBodyHtml = value;
+            }
+        }
         public SendEmail()
         {
             if(File.Exists("mailconfig.json"))
