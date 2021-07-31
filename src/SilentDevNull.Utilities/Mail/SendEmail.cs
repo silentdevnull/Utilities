@@ -130,7 +130,6 @@ namespace SilentDevNull.Utilities.Mail
         {
             if(File.Exists("mailconfig.json"))
             {
-                Console.WriteLine("need to load mailconfig.json");
             }
         }
 
