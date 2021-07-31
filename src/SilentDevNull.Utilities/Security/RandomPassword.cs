@@ -11,6 +11,7 @@ namespace SilentDevNull.Utilities.Security
         public static String CreateRandomPassword(int length = 0) //int length = 0
         {
             int pwdLength = 0;
+            int size = 0;
             if(length == 0)
             {
                 Random randomSize = new Random();
@@ -23,7 +24,7 @@ namespace SilentDevNull.Utilities.Security
             var dateTimeNow = long.Parse(DateTime.Now.ToString("yyyyMMddHHmmss")).ToString();
             var validChars = String.Format($"ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-<>:{dateTimeNow}");
             Random random = new Random();
-            int size = random.Next(8, validChars.Length);
+            size = random.Next(8, validChars.Length);
             char[] chars = new char[pwdLength];
             for (var i = 0; i < pwdLength; i++)
             {
